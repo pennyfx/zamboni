@@ -2,13 +2,83 @@
 
 {% block title %}Landing{% endblock %}
 
+{% block extrahead %}
+	 <link rel="stylesheet" href="{{ media('css/ecosystem/landing.css') }}">
+{% endblock %}
+
 {% block content %}
-    <header class="hero">
-        <h1>BAM!</h1>
-    </header>
-    <section class="island primary full">
-        <h2>Fire at will, Commander.</h2>
-        <p>You may fire when ready.</p>
-    </section>
+
+	<div id="landing-page">
+		<section class="primary rotator full"> 
+			<div id="rotator" class="placeholder img-rotator">
+			</div>
+			
+			<h1>Open Web Apps for all devices 
+				<a href="#">Start Developing</a></h1>
+			<ul class="marketing-horz">
+				<li><h4>Open Web Technologies</h4>
+					<p>Build apps for multiple Web
+					environments with standardsbased
+					technologies.</p>
+				</li>
+				<li><h4>It's your choice</h4>
+					<p>Take control of your app content,
+					functionality, and distribution
+					decisions.</p>
+				</li>
+				<li><h4>Unprecedented reach</h4>
+					<p>Target billions of users worldwide
+					on any platform or device.</p>
+				</li>
+			</ul>
+			<div class="clear">&nbsp;</div>
+			
+		</section>
+		<section class="primary full marketing-block img-left">
+			<h2>See what Open Web Apps can do</h2>
+			<div class="placeholder small"></div>
+			<div class="placeholder small"></div>
+			<div class="placeholder small"></div>
+			<div class="placeholder small"></div>
+			<div class="placeholder small"></div>
+			<div class="placeholder small"></div>
+		</section>
+
+		<section class="primary full marketing-block">
+			<h2>Built with Web technologies</h2>
+			<div class="placeholder wide"></div>
+			<p>Using standards-based technologies that developers already 
+			know, such as HTML5, CSS, and JavaScript, you can develop 
+			apps quickly and easily. With extended access to device APIs 
+			you can do anything Native Apps can do.</p>
+			<a href="#">Start Developing Now >></a>
+		</section>	
+		
+		<section class="primary full marketing-block img-left ">
+			<h2>An App platform with no restrictions</h2>
+			<div class="placeholder large"></div>
+			<p>For developers who want to step away from the restrictions of
+				proprietary technology, Mozilla represents the freedom to
+				develop, distribute, and monetize apps in an environment as
+				vast and open as the Web. You can even publish your apps on
+				your own site if you choose.</p>
+			<a href="#">Learn more about the platform >></a>
+			
+		</section>
+		
+		<section class="primary full marketing-block img-right">
+			<h2>Mozilla Marketplace</h2>
+			<div class="placeholder large"></div>
+			<p>You have the option to distribute and sell your apps to hundreds
+			of millions of Firefox users on desktop and mobile - a market
+			with the growth potential of the web itself. Use our excellent
+			global payment infrastructure and Mozilla community resources
+			to help your app take flight.</p>
+			<a href="#">Learn more about the Marketplace >></a>
+			
+		</section>
+	
+	</div>
+
 
 {% endblock %}
