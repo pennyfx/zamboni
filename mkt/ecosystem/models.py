@@ -1,9 +1,10 @@
 import os
 from datetime import datetime
+
 from django.db import models
 from django.conf import settings
-import amo.models
 
+import amo.models
 
 #TODO: move to settings 
 mdnUrl = 'https://developer.mozilla.org/en'
@@ -11,17 +12,22 @@ mdnUrl = 'https://developer.mozilla.org/en'
 tutorials = [
         { 
             'title': 'Example Tutorial', 
-            'name': 'example', 'mdn': '%s/HTML/HTML5' % mdnUrl },
+            'name': 'example', 
+            'mdn': '%s/HTML/HTML5' % mdnUrl },
         { 
             'title': 'Apps Tutorial', 
-            'name': 'apps', 'mdn': '%s/Apps/Tracks/General' % mdnUrl },
+            'name': 'apps', 
+            'mdn': '%s/Apps/Tracks/General' % mdnUrl },
         { 
             'title': 'Games Tutorial', 
-            'name':'games', 'mdn': '%s/Apps/Tracks/Games' % mdnUrl },
+            'name':'games', 
+            'mdn': '%s/Apps/Tracks/Games' % mdnUrl },
         #{   
         #    'title': 'Social Tutorial', 
-        #    'name': 'social', 'mdn': '%s/Apps/Tracks/Social' % mdnUrl },
+        #    'name': 'social', 
+        #    'mdn': '%s/Apps/Tracks/Social' % mdnUrl },
 ]
+
 
 class MdnCache(models.Model):
 

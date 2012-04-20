@@ -1,6 +1,3 @@
-{% if VIEW_FRAGMENT %}
-  {% extends 'ecosystem/fragment.html' %}
-{% endif %}
 <!DOCTYPE html>
 <html lang="{{ LANG }}" dir="{{ DIR }}">
   <head>
@@ -12,8 +9,12 @@
     {% block extrameta %}{% endblock %}
     <title>{% block title %}{{ _('Mozilla Marketplace') }}{% endblock %}</title>
 
+     <link rel="shortcut icon" type="image/x-icon"
+          href="{{ MEDIA_URL }}img/mkt/logos/128.png" sizes="128x128">
     <link rel="shortcut icon" type="image/x-icon"
-          href="{{ MEDIA_URL}}img/mkt/favicon.ico">
+          href="{{ MEDIA_URL }}img/mkt/logos/64.png" sizes="64x64">
+    <link rel="shortcut icon" type="image/x-icon"
+          href="{{ MEDIA_URL }}img/mkt/logos/32.png" sizes="32x32">
 
     {% block site_css %}
       {{ css('mkt/consumer') }}

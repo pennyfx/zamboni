@@ -1,11 +1,14 @@
 import urllib2
-import lxml
-import commonware.log
-from lxml import html, etree
-from models import tutorials, MdnCache
 from datetime import datetime
+
 from django.core.exceptions import ObjectDoesNotExist
 from django.core.cache import cache
+
+import lxml
+from lxml import html, etree
+
+from models import tutorials, MdnCache
+import commonware.log
 
 log = commonware.log.getLogger('z.ecosystem.cron')
 cache_prefix = 'ecosystem.tutorials.'
@@ -29,7 +32,7 @@ def refresh_mdn_cache():
         model.permalink = item['mdn']
         model.modified = datetime.now()
         model.save()
-        #drop from cache
+        
         cache.delete(cache_prefix + item['name'])
 
 
@@ -56,3 +59,4 @@ def _clean_html_tree(tree):
         except:
             pass
     return tree
+   
