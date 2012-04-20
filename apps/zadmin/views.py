@@ -51,6 +51,8 @@ from versions.compare import version_int as vint
 from versions.models import Version
 from zadmin.forms import GenerateErrorForm, SiteEventForm
 from zadmin.models import SiteEvent
+from mkt.ecosystem.cron import refresh_mdn_cache
+from mkt.ecosystem.models import MdnCache, tutorials
 
 
 from . import tasks
@@ -565,6 +567,20 @@ def elastic(request):
         'mappings': [(index, mappings.get(index, {})) for index in indexes],
     }
     return jingo.render(request, 'zadmin/elastic.html', ctx)
+
+
+@admin.site.admin_view
+def ecosystem(request):
+    if request.method == 'POST':
+        refresh_mdn_cache()
+
+    pages = MdnCache.objects.all()
+    ctx = {
+        'pages': pages, 
+        'tutorials': tutorials
+    }
+
+    return jingo.render(request, 'zadmin/ecosystem.html', ctx)
 
 
 @admin.site.admin_view

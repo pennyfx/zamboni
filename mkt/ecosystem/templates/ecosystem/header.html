@@ -1,0 +1,16 @@
+<header id="site-header">
+  <section>
+    <h1><a href="{{ url('home') }}">{{ _('Mozilla Marketplace') }}</a></h1>
+    
+    <nav>
+      {#
+        <a href="{{ url('ecosystem.tutorial_page') }}">Tutorials</a>
+      #}
+      <a class="external" href="https://developer.mozilla.org/en-US/apps">Reference</a>
+      {% if not request.user.is_authenticated() %}
+        <a href="#">Developer Sign-in</a>
+      {% endif %}
+    </nav> 
+    
+  </section>
+</header>

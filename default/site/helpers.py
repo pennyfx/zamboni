@@ -30,6 +30,7 @@ def admin_site_links():
         'tools': [
             ('View request environment', url('amo.env')),
             ('Manage elasticsearch', url('zadmin.elastic')),
+            ('Manage EcoSystem', url('zadmin.ecosystem')),
             ('View celery stats', url('zadmin.celery')),
             ('Purge data from memcache', url('zadmin.memcache')),
             ('Purge pages from zeus', url('zadmin.hera')),

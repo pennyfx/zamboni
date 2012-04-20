@@ -1,0 +1,44 @@
+{% extends "ecosystem/base.html" %}
+
+{% block title %}Tutorial{% endblock %}
+
+{% block extrahead %}
+	{{ css('mkt/ecosystem') }}	
+{% endblock %}
+
+{% block content %}
+
+	<div id="tutorial" class="marketing-block">
+
+		<div id="content">
+			{{ content|safe }}
+		</div>
+
+		<div id="sidebar">
+			<nav id="nav">
+				<img src="{{ MEDIA_URL}}img/ecosystem/starship.png"></img>			
+				<h3>Tutorials</h3>
+				<ul>
+				{% for item in tutorials %}
+					<li>
+						<a href="{{ item.name }}"	>{{ item.title }}</a>
+						{% if item.name == page %}					
+							{{ toc|safe }}	
+						{% endif %}				
+					</li>
+				{% endfor %}
+				</ul>
+				<h3>Reference</h3>
+				<ul>
+					<li><a class="external" href="https://developer.mozilla.org/en/HTML/HTML5">HTML5</a></li>
+					<li><a class="external" href="https://developer.mozilla.org/en/JavaScript">Javascript</a></li>
+					<li><a class="external" href="https://developer.mozilla.org/en/CSS">CSS</a></li>
+					<li><a class="external" href="https://developer.mozilla.org/en/Apps/Apps_JavaScript_API">Open Web App APIs</a></li>
+				</ul>
+			</nav>
+		</div>
+
+	</div>
+
+
+{% endblock %}

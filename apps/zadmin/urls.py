@@ -55,6 +55,7 @@ urlpatterns = patterns('',
         name='zadmin.monthly_pick'),
 
     url('^elastic$', views.elastic, name='zadmin.elastic'),
+    url('^ecosystem$', views.ecosystem, name='zadmin.ecosystem'),
     url('^mail$', views.mail, name='zadmin.mail'),
     url('^email-devs$', views.email_devs, name='zadmin.email_devs'),
     url('^celery$', views.celery, name='zadmin.celery'),
