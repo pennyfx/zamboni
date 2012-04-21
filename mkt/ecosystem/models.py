@@ -6,26 +6,23 @@ from django.conf import settings
 
 import amo.models
 
-#TODO: move to settings 
-mdnUrl = 'https://developer.mozilla.org/en'
-
 tutorials = [
         { 
             'title': 'Example Tutorial', 
             'name': 'example', 
-            'mdn': '%s/HTML/HTML5' % mdnUrl },
+            'mdn': 'https://developer.mozilla.org/en/HTML/HTML5' },
         { 
             'title': 'Apps Tutorial', 
             'name': 'apps', 
-            'mdn': '%s/Apps/Tracks/General' % mdnUrl },
+            'mdn': 'https://developer.mozilla.org/en/Apps/Tracks/General'  },
         { 
             'title': 'Games Tutorial', 
             'name':'games', 
-            'mdn': '%s/Apps/Tracks/Games' % mdnUrl },
+            'mdn': 'https://developer.mozilla.org/en/Apps/Tracks/Games' },
         #{   
         #    'title': 'Social Tutorial', 
         #    'name': 'social', 
-        #    'mdn': '%s/Apps/Tracks/Social' % mdnUrl },
+        #    'mdn': 'https://developer.mozilla.org/en/Apps/Tracks/Social' },
 ]
 
 

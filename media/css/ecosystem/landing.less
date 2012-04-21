@@ -1,3 +1,6 @@
+body {
+    font-size: 14px;
+}
 #site-header {
     nav {
         float:right;
@@ -9,7 +12,8 @@
         padding-top: 25px;
         color: #6DC7FF;
         text-transform: uppercase;
-        font-size: 13pt;    
+        font-size: 13pt;  
+        text-shadow: 0 1px 1px #444;  
 
     }
     a.external {
@@ -25,18 +29,20 @@
     background-image: url("../../img/mkt/grain.png");
     text-align: center;
     margin: 0 auto; 
+    text-shadow: 0 1px 2px #000; 
 
     .placeholder {
-        height: 300px;
+        height: 250px;
         margin: 0 auto;
-        max-width: 640px;
+        max-width: 510px;
         width: 70%; 
     }
+    
 }
 
 .call-to-action {
     
-    padding: 25px;
+    padding: 0 25px 25px 25px;
     overflow: hidden;           
     margin: 0 auto 0 auto;
     width: 948px;
@@ -47,9 +53,12 @@
 
     div {
         float: left;
-        width: 290px;
+        width: 320px;
         color: white;   
         margin-top: 80px;   
+    }
+    h1 {
+        font-size: 3em;
     }
 }
 
@@ -64,16 +73,18 @@
 }
 
 #demo-list {
-    max-width:550px;
+    max-width:485px;
     float:left;
+    margin: 0;
+    padding: 0;
 
     li {
         list-style: none;
         display:inline-block;
     }
     .placeholder {
-        max-height: 150px;
-        max-width: 220px;
+        height: 120px;
+        width: 200px;
         display: inline;
         margin-right: 20px;
     }
@@ -99,8 +110,7 @@
         margin: 0 auto;
     }
     .placeholder {
-        height: 200px;
-        width:230px;
+       
     }
 }
 
@@ -130,9 +140,7 @@
         max-width: 500px;
     }
 }   
-.clear {
-    clear: both;
-}
+
 
 @media all and (max-width: 1089px) and (min-width: 790px){
     #marketing-horz li {

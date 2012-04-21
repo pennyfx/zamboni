@@ -51,7 +51,7 @@ from versions.compare import version_int as vint
 from versions.models import Version
 from zadmin.forms import GenerateErrorForm, SiteEventForm
 from zadmin.models import SiteEvent
-from mkt.ecosystem.cron import refresh_mdn_cache
+from mkt.ecosystem.tasks import refresh_mdn_cache
 from mkt.ecosystem.models import MdnCache, tutorials
 
 

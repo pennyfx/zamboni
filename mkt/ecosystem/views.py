@@ -5,18 +5,20 @@ from django.core.cache import cache
 import jingo
 
 from models import tutorials, MdnCache
-from cron import refresh_mdn_cache
+from tasks import refresh_mdn_cache
 import commonware.log
 
 log = commonware.log.getLogger('z.ecosystem')
 cache_prefix = 'ecosystem.tutorials.'
 
 
-def landing_page(request):
-    return jingo.render(request, 'ecosystem/landing_page.html')
+def landing(request):
+    return jingo.render(request, 'ecosystem/landing.html')
 
 
-def tutorial_page(request, page):
+def tutorial(request, page):
+
+    refresh_mdn_cache()
 
     if not page:
         page = 'apps'
@@ -32,7 +34,7 @@ def tutorial_page(request, page):
         'toc': data.toc 
         }
 
-    return jingo.render(request, 'ecosystem/tutorial_page.html', ctx)
+    return jingo.render(request, 'ecosystem/tutorial.html', ctx)
 
 
 def _get_page(page):

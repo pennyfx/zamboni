@@ -4,13 +4,15 @@
     
     <nav>
       {#
-        <a href="{{ url('ecosystem.tutorial_page') }}">Tutorials</a>
+        <a href="{{ url('ecosystem.tutorial') }}">Tutorials</a>
       #}
       <a class="external" href="https://developer.mozilla.org/en-US/apps">Reference</a>
       {% if not request.user.is_authenticated() %}
-        <a href="#">Developer Sign-in</a>
+        <a href="{{ url('users.login') }}?to={{ url('ecosystem.landing') }}">Developer Sign-in</a>
+      {% else %}
+       <a href="{{ url('account.settings') }}">Account Settings</a>
       {% endif %}
-    </nav> 
+    </nav>
     
   </section>
 </header>
