@@ -37,6 +37,9 @@ urlpatterns = patterns('',
     # Submission.
     ('^developers/submit/app/', include('mkt.submit.urls')),
 
+    # Dev Ecosystem
+    ('^ecosystem/', include('mkt.ecosystem.urls')),
+
     # In-app payments.
     ('^inapp-pay/', include('mkt.inapp_pay.urls')),
 

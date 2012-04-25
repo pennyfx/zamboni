@@ -92,6 +92,10 @@ CSS = {
         'css/mkt/purchase.less',
         'css/devreg/l10n.less',
     ),
+    'mkt/ecosystem': (
+        'css/ecosystem/landing.less',
+        'css/ecosystem/footer.less',
+	),
     'mkt/in-app-payments': (
         'css/mkt/reset.less',
         'css/mkt/typography.less',
