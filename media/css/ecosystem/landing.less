@@ -181,7 +181,6 @@ body {
 }
 
 .img-right {
-
     .placeholder {
         float: right;
         margin-left: 50px;
@@ -194,9 +193,7 @@ body {
     padding: 0;
 }
 
-
 #tutorial {
-
     margin: 25px auto 25px auto;
     max-width: 984px;
     width: 90%;
@@ -204,11 +201,17 @@ body {
     padding: 0;
 
     h3 {
-        margin-top: 8px;
         font-size: 23px;
+        margin-top: 8px;
     }
     a {
         color: #667990;
+    }
+    pre {
+        border: dashed 2px #ddd;
+        overflow: auto;
+        padding: 10px;
+        white-space: pre;
     }
 
     nav ul {
@@ -254,17 +257,17 @@ body {
         li span {
             display: none;
         }
-        ol, ol ol {
-            padding: 0;
-            margin: 0;
+        ol {
+            display: none;
         }
     }
 }
 
 @media (max-width: @10col) {
-    #page {
-        margin-top: 0;
+    h2 {
+        font-size: 22px;
     }
+
     .home {
         #site-header {
             &:after {
@@ -282,8 +285,9 @@ body {
             }
         }
     }
-    h2 {
-        font-size: 22px;
+
+    #page {
+        margin-top: 0;
     }
     #landing-page #marketing-horz {
         li {
